@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:Student xmlns:tns="http://IMCS.trng.XMl.xsd/Employee" xmlns:tns1="http://www.example.org/Address" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://IMCS.trng.XMl.xsd/Employee ../xsd/Student.xsd ">
+  <tns:id>0</tns:id>
+  <tns:name>tns:name</tns:name>
+  <tns:address>
+    <tns1:home>
+      <tns1:street>tns1:street</tns1:street>
+      <tns1:aptno>0</tns1:aptno>
+    </tns1:home>
+    <tns1:communication>
+      <tns1:street>tns1:street</tns1:street>
+      <tns1:aptno>0</tns1:aptno>
+    </tns1:communication>
+  </tns:address>
+  <tns:marks>
+    <tns:subject>tns:subject</tns:subject>
+    <tns:marks>0.0</tns:marks>
+    <tns:maxMarks>0.0</tns:maxMarks>
+  </tns:marks>
+</tns:Student>

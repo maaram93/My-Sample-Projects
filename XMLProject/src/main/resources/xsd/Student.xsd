@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://IMCS.trng.XMl.xsd/Employee"
+	elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://IMCS.trng.XMl.xsd/Employee"
+	xmlns:pref="http://www.example.org/Address">
+
+
+	<import schemaLocation="Address.xsd" namespace="http://www.example.org/Address"></import>
+	<complexType name="Student">
+		<sequence>
+			<element name="id" type="int"></element>
+			<element name="name" type="string"></element>
+			<element name="address" type="pref:Address" minOccurs="1"
+				maxOccurs="unbounded">
+			</element>
+			<element name="marks" type="tns:Marks"></element>
+		</sequence>
+	</complexType>
+
+
+	<complexType name="Marks">
+		<sequence>
+			<element name="subject" type="string" minOccurs="1"
+				maxOccurs="unbounded">
+			</element>
+			<element name="marks" type="float" minOccurs="1"
+				maxOccurs="unbounded">
+			</element>
+			<element name="maxMarks" type="float"></element>
+		</sequence>
+	</complexType>
+
+
+
+	<element name="Student" type="tns:Student"></element>
+
+
+
+
+
+
+	<element name="Marks" type="tns:Marks"></element>
+</schema>
