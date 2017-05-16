@@ -1,0 +1,21 @@
+{
+
+  "id": 123,
+  "name": "Raj",
+  "address":[ {
+ 	 "addressType": "HOME",
+    "street": "Albany Dr",
+    "aptno": 201
+ }, {
+ 	 "addressType": "Communication",
+    "street": "Mac Arthur Dr",
+    "aptno": 102
+ }
+ ],
+ "marks":{
+ 	"subject": ["cs","physics"],
+ 	"marks": [78,89],
+ 	"maxMarks": 100
+}
+ 
+}
