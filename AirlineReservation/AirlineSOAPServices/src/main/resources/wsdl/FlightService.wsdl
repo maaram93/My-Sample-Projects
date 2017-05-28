@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.example.org/FlightService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FlightService" targetNamespace="http://www.example.org/FlightService/" xmlns:xsd1="http://www.example.org/createFlightDetails" xmlns:xsd2="http://www.example.org/getFlightDetails">
+  <wsdl:types>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    	<xsd:import
+    		namespace="http://www.example.org/createFlightDetails"
+    		schemaLocation="../xsd/createFlightDetails.xsd">
+    	</xsd:import>
+    	<xsd:import namespace="http://www.example.org/getFlightDetails"
+    		schemaLocation="../xsd/getFlightDetails.xsd">
+    	</xsd:import>
+    	<xsd:import
+    		namespace="http://www.example.org/createFlightDetails"
+    		schemaLocation="../xsd/updateFlightDetails.xsd">
+    	</xsd:import>
+    	<xsd:import namespace="http://www.example.org/getFlightDetails"
+    		schemaLocation="../xsd/deleteFlightDetails.xsd">
+    	</xsd:import></xsd:schema></wsdl:types>
+  <wsdl:message name="createFlightDetailsRequest">
+    <wsdl:part element="xsd1:createFlightRequest" name="request"/>
+  </wsdl:message>
+  <wsdl:message name="createFlightDetailsResponse">
+    <wsdl:part element="xsd1:createFlightResponse" name="response"/>
+  </wsdl:message>
+  <wsdl:message name="getFlightDetailsRequest">
+  	<wsdl:part name="request" element="xsd2:getFlightRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getFlightDetailsResponse">
+  	<wsdl:part name="response" element="xsd2:getFlightResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateFlightDetailsRequest">
+  	<wsdl:part name="request" element="xsd1:updateFlightRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateFlightDetailsResponse">
+  	<wsdl:part name="response" element="xsd1:updateFlightResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteFlightDetailsRequest">
+  	<wsdl:part name="request" element="xsd2:deleteFlightRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteFlightDetailsResponse">
+  	<wsdl:part name="response" element="xsd2:deleteFlightResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="FlightService">
+    <wsdl:operation name="createFlightDetails">
+      <wsdl:input message="tns:createFlightDetailsRequest"/>
+      <wsdl:output message="tns:createFlightDetailsResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="getFlightDetails">
+    	<wsdl:input message="tns:getFlightDetailsRequest"></wsdl:input>
+    	<wsdl:output message="tns:getFlightDetailsResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateFlightDetails">
+    	<wsdl:input message="tns:updateFlightDetailsRequest"></wsdl:input>
+    	<wsdl:output message="tns:updateFlightDetailsResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteFlightDetails">
+    	<wsdl:input message="tns:deleteFlightDetailsRequest"></wsdl:input>
+    	<wsdl:output message="tns:deleteFlightDetailsResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FlightServiceSOAP" type="tns:FlightService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="createFlightDetails">
+      <soap:operation soapAction="http://www.example.org/FlightService/createFlightDetails"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FlightService">
+    <wsdl:port binding="tns:FlightServiceSOAP" name="FlightServiceSOAP">
+      <soap:address location="http://www.example.org/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

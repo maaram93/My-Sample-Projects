@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Flight" xmlns:tns="http://www.example.org/Flight" elementFormDefault="qualified">
+
+    <complexType name="Flight">
+    	<sequence>
+    		<element name="flightId" type="int"></element>
+    		<element name="airlineId" type="int"></element>
+    		<element name="origin" type="string"></element>
+    		<element name="destination" type="string"></element>
+    		<element name="departureTime" type="string"></element>
+    		<element name="ArivalTime" type="string"></element>
+    		<element name="duration" type="int"></element>
+    		<element name="totalseats" type="int"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="Flight" type="tns:Flight"></element>
+</schema>

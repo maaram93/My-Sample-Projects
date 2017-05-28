@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/createFlightDetails" xmlns:tns="http://www.example.org/createFlightDetails" elementFormDefault="qualified" xmlns:Q1="http://www.example.org/Flight">
+
+    <import schemaLocation="Flight.xsd" namespace="http://www.example.org/Flight"></import>
+    <complexType name="updateFlightRequest">
+    	<sequence>
+            <element name="flightId" type="hexBinary"></element>
+            <element name="airlineId" type="int"></element>
+    		<element name="origin" type="string"></element>
+    		<element name="destination" type="string"></element>
+    		<element name="departureTime" type="string"></element>
+    		<element name="arivalTime" type="string"></element>
+    		<element name="duration" type="int"></element>
+    		<element name="totalseats" type="int"></element>
+    	</sequence>
+    </complexType>
+    
+    <complexType name="updateFlightResponse">
+    	<sequence>
+    		<element name="flight" type="Q1:Flight"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="updateFlightRequest" type="tns:updateFlightRequest"></element>
+
+    <element name="updateFlightResponse" type="tns:updateFlightResponse"></element>
+</schema>

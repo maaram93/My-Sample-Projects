@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/getFlightDetails" xmlns:tns="http://www.example.org/getFlightDetails" elementFormDefault="qualified">
+
+    <complexType name="deleteFlightRequest">
+    	<sequence>
+    		<element name="flightId" type="int"></element>
+    	</sequence>
+    </complexType>
+    
+    <complexType name="deleteFlightResponse">
+    	<sequence>
+    		<element name="flightId" type="int"></element>
+    		<element name="airlineId" type="int"></element>
+    		<element name="origin" type="string"></element>
+    		<element name="destination" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="deleteFlightRequest" type="tns:deleteFlightRequest"></element>
+
+    <element name="deleteFlightResponse" type="tns:deleteFlightResponse"></element>
+</schema>
