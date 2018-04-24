@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1",
+        "name": "Popcorn",
+        "price": 3.50,
+        "description": "popcorn made from corn and butter"
+    },
+    {
+        "id": "2",
+        "name": "Snickers-bar",
+        "price": 1.20,
+        "description": "snikers made from peanuts and chocolates"
+    },
+    {
+        "id": "3",
+        "name": "soda",
+        "price": 5.65,
+        "description": "soda made from sugars and carbohydrades"
+    }
+]

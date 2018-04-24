@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "price": 3.50,
+    "name": "Popcorn",
+    "description": "popcorn made from corn and butter",
+    "ingredients": [
+      {
+        "name": "corn",
+        "percentage": 50
+      },
+      {
+        "name": "butter",
+        "percentage": 30
+      },
+      {
+        "name": "sweet",
+        "percentage": 20
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "price": 2.75,
+    "name": "Snickers",
+    "description": "snikers made from peanuts and chocolates,milk,sugars",
+    "ingredients": [
+      {
+        "name": "peanuts",
+        "percentage": 40
+      },
+      {
+        "name": "chocolates",
+        "percentage": 20
+      },
+      {
+        "name": "milk",
+        "percentage": 20
+      },
+      {
+        "name": "sugars",
+        "percentage": 20
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "price": 3,
+    "name": "Soda",
+    "description": "soda made from sugars and carbohydrades",
+    "ingredients": [
+      {
+        "name": "sugars",
+        "percentage": 70
+      },
+      {
+        "name": "carbohydrates",
+        "percentage": 30
+      }
+     
+    ]
+  }]
